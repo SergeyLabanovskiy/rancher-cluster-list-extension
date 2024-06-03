@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-extension
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-extension
+  template:
+    metadata:
+      labels:
+        app: my-extension
+    spec:
+      containers:
+        - name: my-extension
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: config-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: config-volume
+          configMap:
+            name: my-extension-config

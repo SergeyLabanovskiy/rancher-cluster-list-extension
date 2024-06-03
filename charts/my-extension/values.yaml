@@ -1,0 +1,8 @@
+image:
+  repository: your-docker-repo/rancher-cluster-list-extension
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80

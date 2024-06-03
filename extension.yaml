@@ -1,0 +1,9 @@
+apiVersion: management.cattle.io/v3
+kind: Catalog
+metadata:
+  name: rancher-cluster-list-extension
+  namespace: cattle-global-data
+spec:
+  catalogKind: Helm
+  url: https://my-repo.com/helm-charts
+  forceUpdate: true
