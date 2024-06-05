@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  rancher-cluster-list-extension:
+    - apiVersion: v2
+      appVersion: 1.0.0
+      created: "2024-06-05T11:54:08.616356+03:00"
+      description: A Helm chart for Rancher cluster list extension
+      digest: c57acb974a058e1ced2e2d128430265f56632f8edd4407c8ae10a33b909e8421
+      name: rancher-cluster-list-extension
+      urls:
+        - https://sergeylabanovskiy.github.io/rancher-cluster-list-extension/charts/rancher-cluster-list-extension-0.1.0.tgz
+      version: 0.1.0
+generated: "2024-06-05T11:54:08.616126+03:00"

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-extension
+  name: rancher-cluster-list-extension
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-extension
+      app: rancher-cluster-list-extension
   template:
     metadata:
       labels:
-        app: my-extension
+        app: rancher-cluster-list-extension
     spec:
       containers:
-        - name: my-extension
+        - name: rancher-cluster-list-extension
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 80
@@ -23,4 +23,4 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: my-extension-config
+            name: rancher-cluster-list-extension-config
