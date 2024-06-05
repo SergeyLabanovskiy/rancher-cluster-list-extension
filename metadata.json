@@ -2,6 +2,6 @@
   "name": "rancher-cluster-list-extension",
   "version": "1.0.0",
   "description": "An extension to display cluster list in Rancher",
-  "uiUrl": "https://raw.githubusercontent.com/SergeyLabanovskiy/rancher-cluster-list-extension/master/dist/bundle.js"
-}cd /Users/sergey/Desktop/Python/Extension/newextention
-git checkout gh-pages
+  "icon": "https://sergeylabanovskiy.github.io/rancher-cluster-list-extension/icon.png",
+  "uiUrl": "https://sergeylabanovskiy.github.io/rancher-cluster-list-extension/bundle.js"
+}
