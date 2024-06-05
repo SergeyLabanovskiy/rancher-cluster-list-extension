@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rancher-cluster-list-extension
+spec:
+  type: "{{ .Values.service.type }}"
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 80
+  selector:
+    app: rancher-cluster-list-extension

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rancher-cluster-list-extension
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rancher-cluster-list-extension
+  template:
+    metadata:
+      labels:
+        app: rancher-cluster-list-extension
+    spec:
+      containers:
+        - name: rancher-cluster-list-extension
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: config-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: config-volume
+          configMap:
+            name: rancher-cluster-list-extension-config
